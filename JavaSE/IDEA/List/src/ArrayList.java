@@ -4,7 +4,7 @@ public class ArrayList extends List {
     private int[] a = new int[100];
 
     @Override
-    public void insert(int index, int val) {
+    public void insert(int index, int val) {//重写父类中的insert方法
         for(int i=size;i>index;i--){
             a[i] = a[i-1];
         }

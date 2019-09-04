@@ -12,19 +12,20 @@ public class LinkedList extends List {
     private Node first = null;
 
     @Override
-    public void insert(int index, int val) {
+    public void insert(int index, int val) {//重写父类中的insert方法
+
         Node node = new Node(val);
-        if(index == 0){
+        if(index == 0){//头插
             node.next = first;
             first = node;
-        }else if(index == size){
+        }else if(index == size){//尾插
             Node last =  first;
             while(last.next != null){
                 last = last.next;
             }
             last.next = node;
             node.next = null;
-        }else{
+        }else{//随插
             Node pre = first;
             for(int i=0;i<index-1;i++){
                 pre = pre.next;

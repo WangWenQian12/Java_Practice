@@ -1,4 +1,4 @@
-
+﻿
 
 public class BinarySearchTree {
 
@@ -104,7 +104,7 @@ public class BinarySearchTree {
             Node goatParent = cur;
             Node goat = cur.right;
             while(goat.left != null){
-                goatParent = cur;
+                goatParent = goat;
                 goat = goat.left;
             }
 

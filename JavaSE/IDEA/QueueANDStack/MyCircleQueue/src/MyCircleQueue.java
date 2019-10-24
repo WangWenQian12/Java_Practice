@@ -1,4 +1,4 @@
-public class MyCircleQueue {
+﻿public class MyCircleQueue {
 
     //MyCircularQueue(k): 构造器，设置队列长度为 k 。
     //	Front: 从队首获取元素。如果队列为空，返回 -1 。
@@ -38,7 +38,7 @@ public class MyCircleQueue {
         }
         front = (front+1)%array.length;
         size--;
-        return false;
+        return true;
     }
 
     //获取首元素

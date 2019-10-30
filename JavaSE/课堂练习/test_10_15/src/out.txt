@@ -1,0 +1,124 @@
+Compiled from "test.java"
+public class test {
+  java.util.HashMap<test$Node, java.util.List<test$Node>> hashbucket;
+
+  public test();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iconst_0
+       6: putfield      #2                  // Field size:I
+       9: aload_0
+      10: new           #3                  // class java/util/HashMap
+      13: dup
+      14: invokespecial #4                  // Method java/util/HashMap."<init>":()V
+      17: putfield      #5                  // Field hashbucket:Ljava/util/HashMap;
+      20: return
+
+  public int get(int);
+    Code:
+       0: iload_1
+       1: aload_0
+       2: getfield      #6                  // Field array:[Ltest$Node;
+       5: arraylength
+       6: idiv
+       7: istore_2
+       8: aload_0
+       9: getfield      #6                  // Field array:[Ltest$Node;
+      12: iload_2
+      13: aaload
+      14: astore_3
+      15: aload_3
+      16: astore        4
+      18: aload         4
+      20: ifnull        48
+      23: aload         4
+      25: invokestatic  #7                  // Method test$Node.access$100:(Ltest$Node;)I
+      28: iload_1
+      29: if_icmpne     38
+      32: aload         4
+      34: invokestatic  #7                  // Method test$Node.access$100:(Ltest$Node;)I
+      37: ireturn
+      38: aload         4
+      40: invokestatic  #8                  // Method test$Node.access$000:(Ltest$Node;)Ltest$Node;
+      43: astore        4
+      45: goto          18
+      48: iconst_m1
+      49: ireturn
+
+  public boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: if_acmpne     7
+       5: iconst_1
+       6: ireturn
+       7: aload_1
+       8: ifnull        22
+      11: aload_0
+      12: invokevirtual #9                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      15: aload_1
+      16: invokevirtual #9                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      19: if_acmpeq     24
+      22: iconst_0
+      23: ireturn
+      24: aload_1
+      25: checkcast     #10                 // class test
+      28: astore_2
+      29: aload_0
+      30: getfield      #2                  // Field size:I
+      33: aload_2
+      34: getfield      #2                  // Field size:I
+      37: if_icmpne     72
+      40: aload_0
+      41: getfield      #6                  // Field array:[Ltest$Node;
+      44: aload_2
+      45: getfield      #6                  // Field array:[Ltest$Node;
+      48: invokestatic  #11                 // Method java/util/Arrays.equals:([Ljava/lang/Object;[Ljava/lang/Object;)Z
+      51: ifeq          72
+      54: aload_0
+      55: getfield      #5                  // Field hashbucket:Ljava/util/HashMap;
+      58: aload_2
+      59: getfield      #5                  // Field hashbucket:Ljava/util/HashMap;
+      62: invokestatic  #12                 // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      65: ifeq          72
+      68: iconst_1
+      69: goto          73
+      72: iconst_0
+      73: ireturn
+
+  public int hashCode();
+    Code:
+       0: iconst_2
+       1: anewarray     #13                 // class java/lang/Object
+       4: dup
+       5: iconst_0
+       6: aload_0
+       7: getfield      #2                  // Field size:I
+      10: invokestatic  #14                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      13: aastore
+      14: dup
+      15: iconst_1
+      16: aload_0
+      17: getfield      #5                  // Field hashbucket:Ljava/util/HashMap;
+      20: aastore
+      21: invokestatic  #15                 // Method java/util/Objects.hash:([Ljava/lang/Object;)I
+      24: istore_1
+      25: bipush        31
+      27: iload_1
+      28: imul
+      29: aload_0
+      30: getfield      #6                  // Field array:[Ltest$Node;
+      33: invokestatic  #16                 // Method java/util/Arrays.hashCode:([Ljava/lang/Object;)I
+      36: iadd
+      37: istore_1
+      38: iload_1
+      39: ireturn
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: ldc           #17                 // String Hello WWQ
+       2: astore_1
+       3: return
+}

@@ -1,4 +1,4 @@
-import java.util.Stack;
+﻿import java.util.Stack;
 
 public class Main {
 
@@ -6,7 +6,7 @@ public class Main {
     //思路：
     //1.遍历字符串，左括号入栈，当遇到右括号时，栈顶元素出栈，看是否与当前右括号匹配
 
-    public static boolean chkParenthesis(String str,int n){
+    public static boolean chkParenthesis(String str){
         Stack<Character> stack = new Stack<> ();
         for(int i = 0;i < str.length ();i++){
             char c = str.charAt (i);
@@ -18,8 +18,8 @@ public class Main {
                     if(stack.isEmpty ()){
                         return false;
                     }
-                    if(stack.remove (stack.size ()-1) == '('){
-                        return true;
+                    if(stack.remove (stack.size ()-1) != '('){
+                        return flase;
                     }
                     break;
                     default:
@@ -35,6 +35,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println (chkParenthesis ("(()())",6));
+         Scanner input = new Scanner (System.in);
+        String str = input.nextLine ();
+        System.out.println (chkParenthesis (str));
     }
 }

@@ -33,6 +33,8 @@ public class HeapSort {
                 swap(arr,index,max);
                 index = max;
                 left = (index * 2) +1;
+            }else{
+                break;
             }
         }
     }

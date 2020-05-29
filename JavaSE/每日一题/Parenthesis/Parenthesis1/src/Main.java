@@ -1,4 +1,5 @@
-﻿import java.util.Stack;
+import java.util.Scanner;
+import java.util.Stack;
 
 public class Main {
 
@@ -19,7 +20,7 @@ public class Main {
                         return false;
                     }
                     if(stack.remove (stack.size ()-1) != '('){
-                        return flase;
+                        return false;
                     }
                     break;
                     default:
@@ -35,7 +36,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-         Scanner input = new Scanner (System.in);
+        Scanner input = new Scanner (System.in);
         String str = input.nextLine ();
         System.out.println (chkParenthesis (str));
     }

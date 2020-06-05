@@ -1,10 +1,10 @@
-﻿import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main {
 
-    //读入一个字符串，输出字符串str中最长的连续数字串
+    //读入一个字符串，输出字符串str中最长的连续字符串
     //思路：
-    //1.遍历字符串，当遇到数字字符且下一个也为数字字符，计数并保存此数字字符
+    //1.遍历字符串，当遇到数字字符且下一个也为数字字符，奇数并保存此数字字符
     //2.默认遍历到的第一个数字字符串为最长字符串，再截取到的数字串长度如果大于默认数字串长度，则更新最长数字串
 
     public static String selectNumberString(String str){

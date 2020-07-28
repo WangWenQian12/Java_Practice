@@ -34,7 +34,7 @@ public class Solution {
         root.left = reConstructBinaryTree (leftpre,leftin);
 
         int[] rightpre = Arrays.copyOfRange (pre,count+1,pre.length);
-        int[] rightin = Arrays.copyOfRange (pre,count+1,in.length);
+        int[] rightin = Arrays.copyOfRange (in,count+1,in.length);
         root.right = reConstructBinaryTree (rightpre,rightin);
 
         return root;
